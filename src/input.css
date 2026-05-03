@@ -4,5 +4,5 @@
     @apply text-white bg-black  rounded-md cursor-pointer 
 }
 .btn2{
-    @apply bg-gray-200 rounded-sm cursor-pointer
+    @apply bg-gray-300 rounded-sm cursor-pointer
 }
