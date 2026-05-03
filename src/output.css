@@ -13,7 +13,12 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-xs: 20rem;
     --container-7xl: 80rem;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
@@ -193,6 +198,9 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .mt-0 {
+    margin-top: calc(var(--spacing) * 0);
+  }
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
@@ -247,6 +255,12 @@
   .aspect-video {
     aspect-ratio: var(--aspect-video);
   }
+  .h-6 {
+    height: calc(var(--spacing) * 6);
+  }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
+  }
   .h-125 {
     height: calc(var(--spacing) * 125);
   }
@@ -271,8 +285,17 @@
   .min-h-125 {
     min-height: calc(var(--spacing) * 125);
   }
+  .w-6 {
+    width: calc(var(--spacing) * 6);
+  }
+  .w-8 {
+    width: calc(var(--spacing) * 8);
+  }
   .w-full {
     width: 100%;
+  }
+  .w-xs {
+    width: var(--container-xs);
   }
   .max-w-7xl {
     max-width: var(--container-7xl);
@@ -310,8 +333,14 @@
   .gap-1\.5 {
     gap: calc(var(--spacing) * 1.5);
   }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
   }
   .gap-8 {
     gap: calc(var(--spacing) * 8);
@@ -336,6 +365,9 @@
   .overflow-hidden {
     overflow: hidden;
   }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
   .rounded-lg {
     border-radius: var(--radius-lg);
   }
@@ -353,6 +385,15 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-gray-200 {
+    border-color: var(--color-gray-200);
+  }
+  .bg-\[u\] {
+    background-color: u;
+  }
+  .bg-\[url\] {
+    background-color: url;
+  }
   .bg-white {
     background-color: var(--color-white);
   }
@@ -362,6 +403,30 @@
       background-color: color-mix(in oklab, var(--color-white) 30%, transparent);
     }
   }
+  .bg-\[url\(\'\'\)\] {
+    background-image: url('');
+  }
+  .bg-\[url\(\'https\:\/\/i\.pinimg\.com\/564x\/6f\/72\/d7\/6f72d776412f0c54529960cdc4891ac9\.jpg\'\)\] {
+    background-image: url('https://i.pinimg.com/564x/6f/72/d7/6f72d776412f0c54529960cdc4891ac9.jpg');
+  }
+  .bg-\[url\(\'https\:\/\/img\.freepik\.com\/free-photo\/image-handsome-caucasian-man-casual-outfit-looking-serious-confident-standing-against-blue-background_1258-65213\.jpg\?semt\=ais_hybrid\&w\=740\&q\=80\'\)\] {
+    background-image: url('https://img.freepik.com/free-photo/image-handsome-caucasian-man-casual-outfit-looking-serious-confident-standing-against-blue-background_1258-65213.jpg?semt=ais_hybrid&w=740&q=80');
+  }
+  .bg-\[url\(\'https\:\/\/img\.freepik\.com\/premium-photo\/woman-wearing-orange-sweater-glasses-is-smiling-camera-blue-backgroound_362752-2567\.jpg\'\)\] {
+    background-image: url('https://img.freepik.com/premium-photo/woman-wearing-orange-sweater-glasses-is-smiling-camera-blue-backgroound_362752-2567.jpg');
+  }
+  .bg-\[url\(\'https\:\/\/t4\.ftcdn\.net\/jpg\/06\/30\/98\/13\/360_F_630981329_WRkGMrGv456ojPXeoxgfYHh66qrF8rJU\.jpg\'\)\] {
+    background-image: url('https://t4.ftcdn.net/jpg/06/30/98/13/360_F_630981329_WRkGMrGv456ojPXeoxgfYHh66qrF8rJU.jpg');
+  }
+  .bg-\[url\(\)\] {
+    background-image: url();
+  }
+  .bg-cover {
+    background-size: cover;
+  }
+  .bg-no-repeat {
+    background-repeat: no-repeat;
+  }
   .object-contain {
     object-fit: contain;
   }
@@ -370,6 +435,9 @@
   }
   .object-fill {
     object-fit: fill;
+  }
+  .p-8 {
+    padding: calc(var(--spacing) * 8);
   }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
@@ -418,6 +486,14 @@
   .text-4xl {
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
